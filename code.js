@@ -1,28 +1,37 @@
-function verificar() {
+function removeAcento (text) {       
+    text = text.toLowerCase();                                                         
+    text = text.replace(new RegExp('[ÁÀÂÃ]','gi'), 'a');
+    text = text.replace(new RegExp('[ÉÈÊ]','gi'), 'e');
+    text = text.replace(new RegExp('[ÍÌÎ]','gi'), 'i');
+    text = text.replace(new RegExp('[ÓÒÔÕ]','gi'), 'o');
+    text = text.replace(new RegExp('[ÚÙÛ]','gi'), 'u');
+    return text;                 
+}
     var pais = window.document.getElementById('pais')
     var res = window.document.querySelector('div#res')
     var img = document.createElement('img')
     img.setAttribute('id', 'foto')
-    switch (pais.value.toLowerCase()) {
+function verificar() {
+    switch (removeAcento(pais.value)) {
         case 'brasil':
             img.setAttribute('src', 'image/brasil.png')
             break
         case 'estados unidos':
             img.setAttribute('src', 'image/eua.png')
             break
-        case 'japão':
+        case 'japao':
             img.setAttribute('src', 'image/japão.png')  
             break 
-        case 'itália':
+        case 'italia':
             img.setAttribute('src', 'image/italia.png')
             break
-        case 'índia':
+        case 'india':
             img.setAttribute('src', 'image/india.png')
             break
-        case 'vietnã':
+        case 'vietna':
             img.setAttribute('src', 'image/vietna.png')
             break 
-        case 'polônia':
+        case 'polonia':
             img.setAttribute('src', 'image/polonia.png')
             break
         case 'laos':
@@ -31,10 +40,10 @@ function verificar() {
         case 'argentina':
             img.setAttribute('src', 'image/argentina.png')
             break
-        case 'canadá': 
+        case 'canada': 
         img.setAttribute('src', 'image/canada.png')
         break
-        case 'áfrica do sul':
+        case 'africa do sul':
             img.setAttribute('src', 'image/africasul.png')
             break
         case 'ruanda':
@@ -43,7 +52,7 @@ function verificar() {
         case 'alemanha':
             img.setAttribute('src', 'image/alemanha.png')
             break
-        case 'somália':
+        case 'somalia':
             img.setAttribute('src', 'image/somalia.png')
             break
         case 'marrocos':
@@ -67,16 +76,16 @@ function verificar() {
         case 'porto rico':
             img.setAttribute('src', 'image/portorico.png')
             break
-        case 'república dominicana':
+        case 'republica dominicana':
             img.setAttribute('src', 'image/republicadominicana.png')
             break
         case 'haiti':
             img.setAttribute('src', 'image/haiti.png')
             break
-        case 'méxico':
+        case 'mexico':
             img.setAttribute('src', 'image/mexico.png')
             break
-        case 'líbano':
+        case 'libano':
             img.setAttribute('src', 'image/libano.png')
             break
         case 'espanha':
@@ -97,46 +106,46 @@ function verificar() {
         case 'paraguai':
             img.setAttribute('src', 'image/paraguai.png')
             break
-        case 'eslováquia':
+        case 'eslovaquia':
             img.setAttribute('src', 'image/eslovaquia.png')
             break  
         case 'palestina':
             img.setAttribute('src', 'image/palestina.png') 
             break
-        case 'bélgica':
+        case 'belgica':
             img.setAttribute('src', 'image/belgica.png')
             break
         case 'andorra':
             img.setAttribute('src', 'image/andorra.png')
             break
-        case 'albânia':
+        case 'albania':
             img.setAttribute('src', 'image/albania.png')   
             break
-        case 'bielorrússia':
+        case 'bielorrussia':
             img.setAttribute('src', 'image/bielorrussia.png')
             break 
-        case 'bósnia e hezergovina':
+        case 'bosnia e hezergovina':
             img.setAttribute('src', 'image/bosnia.png')
             break
-        case 'croácia':
+        case 'croacia':
             img.setAttribute('src', 'image/croatia.png')
             break
-        case 'bulgária':
+        case 'bulgaria':
             img.setAttribute('src', 'image/bulgaria.png')
             break
-        case 'eslovênia':
+        case 'eslovenia':
             img.setAttribute('src', 'image/eslovenia.png')
             break
-        case 'estônia':
+        case 'estonia':
             img.setAttribute('src', 'image/estonia.png')
             break
-        case 'finlândia':
+        case 'finlandia':
             img.setAttribute('src', 'image/finlandia.png')
             break
         case 'dinamarca':
             img.setAttribute('src', 'image/dinamarca.png')
             break
-        case 'islândia':
+        case 'islandia':
             img.setAttribute('src', 'image/islandia.png')
             break
         case 'hungria':
@@ -145,7 +154,7 @@ function verificar() {
         case 'irlanda':
             img.setAttribute('src', 'image/irlanda.png')
             break
-        case 'grécia':
+        case 'grecia':
             img.setAttribute('src', 'image/grecia.png')
             break                        
         case 'liechtenstein':
@@ -157,19 +166,19 @@ function verificar() {
         case 'kosovo':
             img.setAttribute('src', 'image/kosovo.png')
             break
-        case 'lituânia':
+        case 'lituania':
             img.setAttribute('src', 'image/lituania.png')
             break
-        case 'letônia':
+        case 'letonia':
             img.setAttribute('src', 'image/lativia.png')
             break    
-        case 'mônaco':
+        case 'monaco':
             img.setAttribute('src', 'image/monaco.png')
             break
-        case 'moldávia':
+        case 'moldavia':
             img.setAttribute('src', 'image/moldavia.png')
             break
-        case 'macedónia':
+        case 'macedonia':
             img.setAttribute('src', 'image/macedonia.png')
             break
         case 'malta':
@@ -181,34 +190,34 @@ function verificar() {
         case 'reino unido':
             img.setAttribute('src', 'image/reinounido.png')
             break
-        case 'países baixos':
+        case 'paises baixos':
             img.setAttribute('src', 'image/paisesbaixos.png')
             break
         case 'noruega':
             img.setAttribute('src', 'image/noruega.png')
             break
-        case 'república tcheca':
+        case 'republica tcheca':
             img.setAttribute('src', 'image/republicatcheca.png')
             break
-        case 'rússia':
+        case 'russia':
             img.setAttribute('src', 'image/russia.png')
             break
         case 'san marino':
             img.setAttribute('src', 'image/sanmarino.png')
             break
-        case 'romênia':
+        case 'romenia':
             img.setAttribute('src', 'image/romenia.png')
             break
         case 'vaticano':
             img.setAttribute('src', 'image/vaticano.png')
             break
-        case 'ucrânia':
+        case 'ucrania':
             img.setAttribute('src', 'image/ucrania.png')
             break
-        case 'sérvia':
+        case 'servia':
             img.setAttribute('src', 'image/servia.png')
             break
-        case 'suécia':
+        case 'suecia':
             img.setAttribute('src', 'image/suecia.png')
             break
         case 'suiça':
@@ -217,16 +226,16 @@ function verificar() {
         case 'china':
             img.setAttribute('src', 'image/china.png')
             break
-        case 'armênia':
+        case 'armenia':
             img.setAttribute('src', 'image/armenia.png')
             break
-        case 'arábia saudita':
+        case 'arabia saudita':
             img.setAttribute('src', 'image/arabiasaudita.png')
             break
-        case 'azerbaijão':
+        case 'azerbaijao':
             img.setAttribute('src', 'image/azerbaijão.png')
             break
-        case 'afeganistão':
+        case 'afeganistao':
             img.setAttribute('src', 'image/afeganistão.png')
             break
         case 'bahrein':
@@ -235,7 +244,7 @@ function verificar() {
         case 'brunei':
             img.setAttribute('src', 'image/brunei.png')
             break
-        case 'butão':
+        case 'butao':
             img.setAttribute('src', 'image/butão.png')
             break
         case 'bangladesh':
@@ -250,16 +259,16 @@ function verificar() {
         case 'catar':
             img.setAttribute('src', 'image/catar.png')
             break
-        case 'cazaquistão':
+        case 'cazaquistao':
             img.setAttribute('src', 'image/cazaquistão.png')
             break
-        case 'iêmen':
+        case 'iemen':
             img.setAttribute('src', 'image/iemen.png')
             break
-        case 'emirados árabes unidos':
+        case 'emirados arabes unidos':
             img.setAttribute('src', 'image/emiradosarabes.png')
             break
-        case 'geórgia':
+        case 'georgia':
             img.setAttribute('src', 'image/georgia.png')
             break
         case 'coreia do sul':
@@ -268,61 +277,58 @@ function verificar() {
         case 'coreia do norte':
             img.setAttribute('src', 'image/coreianorte.png')
             break
-        case 'jordânia':
+        case 'jordania':
             img.setAttribute('src', 'image/jordania.png')
             break
         case 'israel':
             img.setAttribute('src', 'image/israel.png')
             break
-        case 'irã':
+        case 'ira':
             img.setAttribute('src', 'image/irã.jpg')
-            break
-        case 'japão':
-            img.setAttribute('src', 'image/japão.png')
             break
         case 'iraque':
             img.setAttribute('src', 'image/iraque.png')
             break
-        case 'indonésia':
+        case 'indonesia':
             img.setAttribute('src', 'image/indonesia.png')
             break
         case 'maldivas':
             img.setAttribute('src', 'image/maldivas.png')
             break
-        case 'mongólia':
+        case 'mongolia':
             img.setAttribute('src', 'image/mongolia.png')
             break
-        case 'malásia':
+        case 'malasia':
             img.setAttribute('src', 'image/malasia.png')
             break
         case 'nepal':
             img.setAttribute('src', 'image/nepal.png')
             break
-        case 'omã':
+        case 'oma':
             img.setAttribute('src', 'image/omã.png')
             break
         case 'sri lanka':
             img.setAttribute('src', 'image/srilanka.png')
             break
-        case 'síria':
+        case 'siria':
             img.setAttribute('src', 'image/siria.png')
             break
-        case 'tailândia':
+        case 'tailandia':
             img.setAttribute('src', 'image/tailandia.png')
             break
-        case 'paquistão':
+        case 'paquistao':
             img.setAttribute('src', 'image/paquistão.png')
             break
-        case 'uzbequistão':
+        case 'uzbequistao':
             img.setAttribute('src', 'image/uzbequistão.png')
             break
-        case 'turcomenistão':
+        case 'turcomenistao':
             img.setAttribute('src', 'image/turcomenistão.png')
             break
         case 'timor-leste':
             img.setAttribute('src', 'image/timorleste.png')
             break
-        case 'tajiquistão':
+        case 'tajiquistao':
             img.setAttribute('src', 'image/tajiquistão.png')
             break
         case 'taiwan':
@@ -337,7 +343,7 @@ function verificar() {
         case 'burundi':
             img.setAttribute('src', 'image/burundi.png')
             break
-        case 'argélia':
+        case 'argelia':
             img.setAttribute('src', 'image/argelia.png')
             break
         case 'botswana':
@@ -361,40 +367,40 @@ function verificar() {
         case 'comores':
             img.setAttribute('src', 'image/comores.png')
             break
-        case 'camarões':
+        case 'camaroes':
             img.setAttribute('src', 'image/camarões.png')
             break
         case 'eritreia':
             img.setAttribute('src', 'image/eritreia.png')
             break
-        case 'etiópia':
+        case 'etiopia':
             img.setAttribute('src', 'image/etiopia.png')
             break
-        case 'essuatíni':
+        case 'essuatini':
             img.setAttribute('src', 'image/essuatini.png')
             break
-        case 'gabão':
+        case 'gabao':
             img.setAttribute('src', 'image/gabão.png')
             break
-        case 'gâmbia':
+        case 'gambia':
             img.setAttribute('src', 'image/gambia.png')
             break
-        case 'guiné':
+        case 'guine':
             img.setAttribute('src', 'image/guine.png')
             break
-        case 'guiné-bissau':
+        case 'guine-bissau':
             img.setAttribute('src', 'image/guinebissau.png')
             break
-        case 'guiné equatorial':
+        case 'guine equatorial':
             img.setAttribute('src', 'image/guineequatorial.png')
             break
         case 'lesoto':
             img.setAttribute('src', 'image/lesoto.png')
             break
-        case 'libéria':
+        case 'liberia':
             img.setAttribute('src', 'image/liberia.png')
             break
-        case 'líbia':
+        case 'libia':
             img.setAttribute('src', 'image/libia.jpg')
             break
         case 'madagascar':
@@ -406,37 +412,37 @@ function verificar() {
         case 'mali':
             img.setAttribute('src', 'image/mali.png')
             break
-        case 'maurícia':
+        case 'mauricia':
             img.setAttribute('src', 'image/maurícia.png')
             break
-        case 'mauritânia':
+        case 'mauritania':
             img.setAttribute('src', 'image/mauritania.jpg')
             break
-        case 'quênia':
+        case 'quenia':
             img.setAttribute('src', 'image/quenia.png')
             break
         case 'niger':
             img.setAttribute('src', 'image/niger.png')
             break
-        case 'nigéria':
+        case 'nigeria':
             img.setAttribute('src', 'image/nigeria.png')
             break
-        case 'namíbia':
+        case 'namibia':
             img.setAttribute('src', 'image/namibia.png')
             break
         case 'moçambique':
             img.setAttribute('src', 'image/moçambique.png')
             break
-        case 'república centro-africana':
+        case 'republica centro-africana':
             img.setAttribute('src', 'image/republicacentroafricana.png')
             break
-        case 'república democrática do congo':
+        case 'republica democratica do congo':
             img.setAttribute('src', 'image/republicademocraticadocongo.png')
             break
-        case 'república do congo':
+        case 'republica do congo':
             img.setAttribute('src', 'image/republicadocongo.png')
             break
-        case 'são tomé e príncipe':
+        case 'sao tome e principe':
             img.setAttribute('src', 'image/saotomeeprincipe.png')
             break
         case 'senegal':
@@ -448,28 +454,28 @@ function verificar() {
         case 'seychelles':
             img.setAttribute('src', 'image/seychelles.png')
             break
-        case 'tunísia':
+        case 'tunisia':
             img.setAttribute('src', 'image/tunisia.png')
             break
-        case 'quirguistão':
+        case 'quirguistao':
             img.setAttribute('src', 'image/quirguistão.png')
             break
-        case 'tanzânia':
+        case 'tanzania':
             img.setAttribute('src', 'image/tanzania.png')
             break
-        case 'sudão':
+        case 'sudao':
             img.setAttribute('src', 'image/sudão.png')
             break
-        case 'sudão do sul':
+        case 'sudao do sul':
             img.setAttribute('src', 'image/sudãodosul.png')
             break
-        case 'antígua e barbuda':
+        case 'antigua e barbuda':
             img.setAttribute('src', 'image/antiguaebarbuda.png')
             break
-        case 'zâmbia':
+        case 'zambia':
             img.setAttribute('src', 'image/zambia.png')
             break
-        case 'zimbábue':
+        case 'zimbabue':
             img.setAttribute('src', 'image/zimbabue.png')
             break
         case 'barbados':
@@ -499,37 +505,37 @@ function verificar() {
         case 'guatemala':
             img.setAttribute('src', 'image/guatemala.png')
             break
-        case 'nicaraguá':
+        case 'nicaragua':
             img.setAttribute('src', 'image/nicaragua.png')
             break
-        case 'república dominicana':
+        case 'republica dominicana':
             img.setAttribute('src', 'image/republicadominicana.png')
             break
-        case 'santa lúcia':
+        case 'santa lucia':
             img.setAttribute('src', 'image/santalucia.png')
             break
         case 'jamaica':
             img.setAttribute('src', 'image/jamaica.png')
             break
-        case 'panamá':
+        case 'panama':
             img.setAttribute('src', 'image/panama.png')
             break
         case 'honduras':
             img.setAttribute('src', 'image/honduras.png')
             break
-        case 'são cristóvão e neves':
+        case 'sao cristovao e neves':
             img.setAttribute('src', 'image/saocristovaoeneves.png')
             break
-        case 'são vicente e granadinas':
+        case 'sao vicente e granadinas':
             img.setAttribute('src', 'image/saovicenteegranadinas.png')
             break
         case 'trindade e tobago':
             img.setAttribute('src', 'image/trindadeetobago.png')
             break
-        case 'bolívia':
+        case 'bolivia':
             img.setAttribute('src', 'image/bolivia.png')
             break
-        case 'colômbia':
+        case 'colombia':
             img.setAttribute('src', 'image/colombia.png')
             break
         case 'venezuela':
@@ -547,10 +553,10 @@ function verificar() {
         case 'suriname':
             img.setAttribute('src', 'image/suriname.png')
             break
-        case 'austrália':
+        case 'australia':
             img.setAttribute('src', 'image/australia.png')
             break
-        case 'estados federados da micronésia':
+        case 'estados federados da micronesia':
             img.setAttribute('src', 'image/micronesia.png')
             break
         case 'ilhas marshall':
@@ -562,7 +568,7 @@ function verificar() {
         case 'kiribati':
             img.setAttribute('src', 'image/kiribati.png')
             break
-        case 'ilhas salomão':
+        case 'ilhas salomao':
             img.setAttribute('src', 'image/salomao.png')
             break
         case 'tonga':
@@ -580,7 +586,7 @@ function verificar() {
         case 'palau':
             img.setAttribute('src', 'image/palau.png')
             break
-        case 'papua-nova guiné':
+        case 'papua-nova guine':
             img.setAttribute('src', 'image/papuanova.png')
             break
         case 'vanuatu':
