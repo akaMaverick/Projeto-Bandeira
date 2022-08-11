@@ -12,9 +12,13 @@
 </li>
 <li>Funcionalidade 2:
 <p>Adicionado uma função removeAcento que mesmo que o usuário digite com acento certos ou errados, ou letras maiúsculas, ela passará para a condicional tudo em letras minúsculas e sem acento. Assim o usuário somente terá que digitar com as letras corretas o nome do país.</p>
+<p>Exemplo digitado de um país com letras maiúsculas e minúsculas e acento: </p>
+<img src="image/exemploReadMe.jpeg" width="80%">
 </li>
 </li>
 </ul>
+<h2>Link do protótipo no GitHub Pages</h2>
+<a href="https://akamaverick.github.io/Projeto-Bandeira/" target="_blank">🌟 Projeto Bandeira</a>
 <h2>Imagens utilizadas neste projeto</h2>
 <p>Todas as imagens usadas foram adquiridas no Pixabay ou no Pexels que normalmente tem licença gratuita de uso, como alguns países não foi possível achar tal ocorrência, decidi por não coloca-los</p>
 <h3>Lista de países que não se encontra no projeto</h3>
