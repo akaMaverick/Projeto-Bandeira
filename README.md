@@ -15,7 +15,7 @@
 </li>
 </li>
 </ul>
-<h2>Imagens utilizadas nesta Challenge</h2>
+<h2>Imagens utilizadas neste projeto</h2>
 <p>Todas as imagens usadas foram adquiridas no Pixabay ou no Pexels que normalmente tem licença gratuita de uso, como alguns países não foi possível achar tal ocorrência, decidi por não coloca-los</p>
 <h3>Lista de países que não se encontra no projeto</h3>
 <ul>
